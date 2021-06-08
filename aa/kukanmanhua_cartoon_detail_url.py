@@ -22,7 +22,7 @@ class BaseCartoon(BaseSpider):
             qin_quaq_list_data = response_data.xpath('//*[@id="detail-list-select"]/li')
             for q_l in qin_quaq_list_data:
                 dic_info = {}
-                qin_quan_url = "https://www.kukk.net" + ''.join(q_l.xpath('./a/@href'))  # 侵权链接
+                qin_quan_url = "https://www.kukk.net" + ''.join(q_l.xpath('./a/@href'))  
                 qin_quan_title = ''.join(q_l.xpath('./a/text()')).replace(' ', '')
                 dic_info["qin_quan_url"] = qin_quan_url
                 dic_info["qin_quan_title"] = qin_quan_title
